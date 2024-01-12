@@ -11,15 +11,16 @@ const app = express();
 dotenv.config();
 connectDB();
 
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 app.use(
   cors({
     origin: "https://online-payment-receive-frontend-t8yn.vercel.app",
     credentials: true,
   })
 );
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
 
 app.use("/api/v1", paymnetRouter);
 app.use("/api/v1", userRoute);
