@@ -13,7 +13,7 @@ connectDB();
 
 app.use(
   cors({
-    origin: "*",
+    origin: "https://online-payment-receive-frontend-t8yn.vercel.app",
     credentials: true,
   })
 );
