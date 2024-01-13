@@ -11,13 +11,12 @@ const app = express();
 dotenv.config();
 connectDB();
 
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://online-payment-receive-frontend-t8yn.vercel.app",
+    origin: "https://online-payment-receive-frontend.vercel.app",
     credentials: true,
   })
 );
