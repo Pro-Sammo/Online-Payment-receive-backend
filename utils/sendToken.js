@@ -17,8 +17,8 @@ export const sendTokenForAdmin = (res, user, message, statusCode = 200) => {
     httpOnly: true,
     secure: true,
     sameSite: "None",
-    domain: "online-payment-receive-frontend.vercel.app",
   };
+  
   res.status(statusCode).cookie("AdminAuthToken", token, options).json({
     success: true,
     message: message,
