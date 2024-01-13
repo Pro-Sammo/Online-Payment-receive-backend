@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://online-payment-receive-frontend.vercel.app",
+    origin: ".online-payment-receive-frontend.vercel.app",
     credentials: true,
   })
 );
